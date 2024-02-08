@@ -15,7 +15,7 @@ if (localData != null) {
   regDataAll = localData;
 }
 
-if (window.location.pathname === "./signup.html") {
+if (window.location.pathname.includes("signup.html")) {
   console.log("signup");
   nameSignUp.addEventListener("keyup", () => {
     if (nameRegex.test(nameSignUp.value)) {
@@ -123,8 +123,8 @@ function redirectToHome(username) {
 }
 
 if (
-  window.location.pathname == "./index.html" ||
-  window.location.pathname == "./"
+  window.location.pathname.includes("index.html") ||
+  window.location.pathname === "/"
 ) {
   signinBtn.addEventListener("click", () => {
     loginCheck();
