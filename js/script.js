@@ -15,7 +15,7 @@ if (localData != null) {
   regDataAll = localData;
 }
 
-if (window.location.pathname === "/signup.html") {
+if (window.location.pathname === "./signup.html") {
   nameSignUp.addEventListener("keyup", () => {
     if (nameRegex.test(nameSignUp.value)) {
       nameSignUp.classList.remove("is-invalid");
@@ -122,15 +122,15 @@ function redirectToHome(username) {
 }
 
 if (
-  window.location.pathname == "/index.html" ||
-  window.location.pathname == "/"
+  window.location.pathname == "./index.html" ||
+  window.location.pathname == "./"
 ) {
   signinBtn.addEventListener("click", () => {
     loginCheck();
   });
 }
 
-if (window.location.pathname == "/home.html") {
+if (window.location.pathname == "./home.html") {
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
     var logoutBtn = document.getElementById("logoutBtn");
