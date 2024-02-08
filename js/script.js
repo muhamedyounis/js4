@@ -15,7 +15,7 @@ if (localData != null) {
 }
 
 if (window.location.pathname === "/signup.html") {
-  nameSignUp.addEventListener("change", () => {
+  nameSignUp.addEventListener("keyup", () => {
     if (nameRegex.test(nameSignUp.value)) {
       nameSignUp.classList.remove("is-invalid");
       nameSignUp.classList.add("is-valid");
@@ -25,7 +25,7 @@ if (window.location.pathname === "/signup.html") {
     }
   });
 
-  emailSignUp.addEventListener("change", () => {
+  emailSignUp.addEventListener("keyup", () => {
     if (emailRegex.test(emailSignUp.value)) {
       emailSignUp.classList.remove("is-invalid");
       emailSignUp.classList.add("is-valid");
@@ -35,7 +35,7 @@ if (window.location.pathname === "/signup.html") {
     }
   });
 
-  passwordSignUp.addEventListener("change", () => {
+  passwordSignUp.addEventListener("keyup", () => {
     if (passwordRegex.test(passwordSignUp.value)) {
       passwordSignUp.classList.remove("is-invalid");
       passwordSignUp.classList.add("is-valid");
