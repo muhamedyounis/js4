@@ -132,15 +132,14 @@ if (
 if (window.location.pathname == "/home.html") {
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
+    var logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+      sessionStorage.removeItem("userLoggedIn");
+      window.location.href = "../index.html";
+    });
   } else {
     document.getElementById("loggedIn").style.display = "block";
     document.getElementById("userName").innerHTML =
       sessionStorage.getItem("userLoggedIn");
   }
 }
-
-var logoutBtn = document.getElementById("logoutBtn");
-logoutBtn.addEventListener("click", () => {
-  sessionStorage.removeItem("userLoggedIn");
-  window.location.href = "../index.html";
-});
