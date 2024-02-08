@@ -1,3 +1,4 @@
+console.log("script");
 var nameSignUp = document.getElementById("nameSignUp");
 var emailSignUp = document.getElementById("emailSignUp");
 var passwordSignUp = document.getElementById("passwordSignUp");
