@@ -15,7 +15,7 @@ if (localData != null) {
   regDataAll = localData;
 }
 
-if (window.location.pathname == "/signup.html") {
+if (window.location.pathname == "/js4/signup.html") {
   console.log("signup");
   nameSignUp.addEventListener("change", () => {
     if (nameRegex.test(nameSignUp.value)) {
