@@ -119,7 +119,7 @@ function loginCheck() {
 
 function redirectToHome(username) {
   sessionStorage.setItem("userLoggedIn", username);
-  window.location.href = "../home.html";
+  window.location.href = "/js4/home.html";
 }
 
 if (
@@ -139,7 +139,7 @@ if (window.location.pathname == "/js4/home.html") {
     var logoutBtn = document.getElementById("logoutBtn");
     logoutBtn.addEventListener("click", () => {
       sessionStorage.removeItem("userLoggedIn");
-      window.location.href = "../index.html";
+      window.location.href = "/js4/index.html";
     });
   } else {
     document.getElementById("loggedIn").style.display = "block";
