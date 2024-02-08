@@ -124,7 +124,7 @@ function redirectToHome(username) {
 
 if (
   window.location.pathname.includes("index.html") ||
-  window.location.pathname === "/"
+  window.location.pathname == "/"
 ) {
   signinBtn.addEventListener("click", () => {
     loginCheck();
