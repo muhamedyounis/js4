@@ -16,6 +16,7 @@ if (localData != null) {
 }
 
 if (window.location.pathname === "./signup.html") {
+  console.log("signup");
   nameSignUp.addEventListener("keyup", () => {
     if (nameRegex.test(nameSignUp.value)) {
       nameSignUp.classList.remove("is-invalid");
@@ -131,6 +132,7 @@ if (
 }
 
 if (window.location.pathname == "./home.html") {
+  console.log("home");
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
     var logoutBtn = document.getElementById("logoutBtn");
