@@ -15,7 +15,7 @@ if (localData != null) {
   regDataAll = localData;
 }
 
-if (window.location.pathname.includes("/signup.html")) {
+if (window.location.pathname == "/signup.html") {
   console.log("signup");
   nameSignUp.addEventListener("change", () => {
     if (nameRegex.test(nameSignUp.value)) {
@@ -123,8 +123,8 @@ function redirectToHome(username) {
 }
 
 if (
-  window.location.pathname.includes("js4/index.html") ||
-  window.location.pathname.includes("js4/")
+  window.location.pathname == "/js4/" ||
+  window.location.pathname == "/js4/index.html"
 ) {
   console.log("signin");
   signinBtn.addEventListener("click", () => {
@@ -132,7 +132,7 @@ if (
   });
 }
 
-if (window.location.pathname.includes("/home.html")) {
+if (window.location.pathname == "/js4/home.html") {
   console.log("home");
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
