@@ -15,9 +15,9 @@ if (localData != null) {
   regDataAll = localData;
 }
 
-if (window.location.pathname.includes("signup.html")) {
+if (window.location.pathname.includes("/signup.html")) {
   console.log("signup");
-  nameSignUp.addEventListener("keyup", () => {
+  nameSignUp.addEventListener("change", () => {
     if (nameRegex.test(nameSignUp.value)) {
       nameSignUp.classList.remove("is-invalid");
       nameSignUp.classList.add("is-valid");
@@ -27,7 +27,7 @@ if (window.location.pathname.includes("signup.html")) {
     }
   });
 
-  emailSignUp.addEventListener("keyup", () => {
+  emailSignUp.addEventListener("change", () => {
     if (emailRegex.test(emailSignUp.value)) {
       emailSignUp.classList.remove("is-invalid");
       emailSignUp.classList.add("is-valid");
@@ -37,7 +37,7 @@ if (window.location.pathname.includes("signup.html")) {
     }
   });
 
-  passwordSignUp.addEventListener("keyup", () => {
+  passwordSignUp.addEventListener("change", () => {
     if (passwordRegex.test(passwordSignUp.value)) {
       passwordSignUp.classList.remove("is-invalid");
       passwordSignUp.classList.add("is-valid");
@@ -123,16 +123,15 @@ function redirectToHome(username) {
 }
 
 if (
-  window.location.pathname.includes("index.html") ||
-  window.location.pathname == "/"
+  window.location.pathname.includes("/index.html") ||
+  window.location.pathname.includes("/")
 ) {
   signinBtn.addEventListener("click", () => {
     loginCheck();
   });
 }
 
-if (window.location.pathname == "./home.html") {
-  console.log("home");
+if (window.location.pathname.includes("/home.html")) {
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
     var logoutBtn = document.getElementById("logoutBtn");
