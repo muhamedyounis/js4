@@ -123,15 +123,17 @@ function redirectToHome(username) {
 }
 
 if (
-  window.location.pathname.includes("/index.html") ||
-  window.location.pathname.includes("/")
+  window.location.pathname.includes("js4/index.html") ||
+  window.location.pathname.includes("js4/")
 ) {
+  console.log("signin");
   signinBtn.addEventListener("click", () => {
     loginCheck();
   });
 }
 
 if (window.location.pathname.includes("/home.html")) {
+  console.log("home");
   if (sessionStorage.getItem("userLoggedIn") == null) {
     document.getElementById("notLoggedIn").style.display = "block";
     var logoutBtn = document.getElementById("logoutBtn");
