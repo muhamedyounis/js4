@@ -62,7 +62,7 @@ if (window.location.pathname == "/js4/signup.html") {
       regDataAll.push(regData);
       localStorage.setItem("users", JSON.stringify(regDataAll));
       clearInputs();
-      window.location.href = "../index.html";
+      window.location.href = "/js4/index.html";
     } else if (regDataAll.some((user) => user.email == emailSignUp.value)) {
       Swal.fire({
         title: "Email is already registered!",
@@ -113,6 +113,12 @@ function loginCheck() {
         icon: "success",
       });
       redirectToHome(userName);
+    } else {
+      Swal.fire({
+        title: "Account not found",
+        text: "We haven't found an account with this credentials",
+        icon: "danger",
+      });
     }
   }
 }
@@ -140,10 +146,10 @@ if (window.location.pathname == "/js4/home.html") {
     document.getElementById("loggedIn").style.display = "block";
     document.getElementById("userName").innerHTML =
       sessionStorage.getItem("userLoggedIn");
+    var logoutBtn = document.getElementById("logout-btn");
+    logoutBtn.addEventListener("click", () => {
+      sessionStorage.removeItem("userLoggedIn");
+      window.location.href = "/js4/index.html";
+    });
   }
-  var logoutBtn = document.getElementById("logoutBtn");
-  logoutBtn.addEventListener("click", () => {
-    sessionStorage.removeItem("userLoggedIn");
-    window.location.href = "/js4/index.html";
-  });
 }
